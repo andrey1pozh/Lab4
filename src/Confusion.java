@@ -6,9 +6,14 @@ public class Confusion extends Thing{
         setName(name);
     }
 
-    public String happen(){
-        return "Произошло";
-    }
+    //public String happen(){
+        //return "Произошло";
+    //}
+    Confus conf = new Confus(){                           //анонимный класс
+        public void fall(){
+            System.out.print("Произошло замешательство");
+        }
+    };
 
     public boolean equals(Object obj) {
         if (obj != null && obj.getClass() == this.getClass()) {
@@ -29,5 +34,8 @@ public class Confusion extends Thing{
 
     public String toString() {
         return this.name;
+    }
+
+    private class Confus {
     }
 }

@@ -80,6 +80,7 @@ public class Main {
         Cosmonaut.fall(pathName);
         System.out.println(placeName);
 
-        System.out.print(confusion.happen() + " " + confusion.getName());
+        //System.out.print(confusion.happen() + " " + confusion.getName());
+
     }
 }
