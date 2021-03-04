@@ -36,6 +36,9 @@ public class Confusion extends Thing{
         return this.name;
     }
 
-    private class Confus {
+    public class Confus {
+        public void fall() {
+
+        }
     }
 }

@@ -81,6 +81,6 @@ public class Main {
         System.out.println(placeName);
 
         //System.out.print(confusion.happen() + " " + confusion.getName());
-
+        confusion.conf.fall();
     }
 }
