@@ -23,7 +23,7 @@ public class Policeman extends Human {
         return "выстрелил " + description;
     }
 
-    public static class boomStick{
+    public static class boomStick{                         //Вложенный статический класс
         private String name;
         public void setName(String name) {
             this.name = name;

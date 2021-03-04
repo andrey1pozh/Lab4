@@ -19,7 +19,7 @@ public class Main {
         rocket0.setName("корабль");
         stekliaskin.setDescription("на крышах домов");
         Flash flash = new Flash();
-        flash.setName("вспышка");
+        flash.setName("вспышки");
 
         Policeman policeman = new Policeman();
         policeman.setName("полицейских");
@@ -42,10 +42,14 @@ public class Main {
         stekliaskin.setName("он");
         Policeman.boomStick.armed("на земле");
         System.out.print(firstName + " " + stekliaskin.getName() + " " + stekliaskin.think() + " " + Policeman.boomStick.getName());
-        System.out.println();
+        System.out.print(", но" + " ");
 
+        Policeman.boomStick.setName("'палок'");
+        System.out.print(stekliaskin.noticed() + ", что" + " ");
+        System.out.print("из этих " + Policeman.boomStick.getName() + ", ");
         flash.smoke();
-        System.out.println(flash.description + " дыма");
+        flash.fire.descr();
+        System.out.println(flash.description + " дыма" + " вырываются " + flash.fireDescr + " " + flash.getName());
 
 
         policeman.setName(" полицейский");

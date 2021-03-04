@@ -3,6 +3,7 @@ import java.util.Objects;
 public class Flash extends Thing {
     private String name;
     public String description;
+    public String fireDescr;
     public void setName(String name) {
         this.name = name;
     }
@@ -16,13 +17,24 @@ public class Flash extends Thing {
     }
 
     public void smoke(){
-        class Cloud{
+        class Cloud{                                             //локальный класс
             void white(){
                 description = "белыми облачками";
             }
         }
         Cloud cloud = new Cloud();
         cloud.white();
+    }
+    public class Fire{                                             //вложенный класс
+        void descr(){
+            fireDescr = "огненные";
+        }
+    }
+
+    Fire fire = new Fire();
+
+    public String fire(){
+        return fireDescr;
     }
 
     public boolean equals(Object obj) {

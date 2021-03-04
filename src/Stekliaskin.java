@@ -23,6 +23,10 @@ public class Stekliaskin extends Human {
         return "подумал что это";
     }
 
+    public String noticed(){
+        return "вскоре заметил";
+    }
+
     public boolean equals(Object obj) {
         if (obj != null && obj.getClass() == this.getClass()) {
             if (this == obj) {
