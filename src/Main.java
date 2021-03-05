@@ -30,7 +30,7 @@ public class Main {
         rocket.setName("Ракета");
         Bullet bullet = new Bullet("Пуля");
         Cosmonaut cosmonaut = new Cosmonaut("космонавт");
-        Confusion confusion = new Confusion("замешательство");
+        //Confusion confusion = new Confusion("замешательство");
 
         System.out.print(znaika.getName() + " ");
         Znaika.move("на снижение");
