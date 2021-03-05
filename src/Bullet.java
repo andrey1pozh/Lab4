@@ -3,8 +3,12 @@ import java.util.Objects;
 public class Bullet extends Thing{
     private String name;
 
-    public Bullet(String name) {
-        setName(name);
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     /*protected void noPunch(){

@@ -10,12 +10,12 @@ public class Znaika extends Human {
         return this.name;
     }
 
-        protected static void move(String where) {
+        public static void move(String where) throws ShipMoveEx {
             if (where.equals("на снижение")){
                 System.out.print("повел");
             }
             else {
-                System.out.print("улетел");
+                throw new ShipMoveEx("остановил");
             }
     }
 

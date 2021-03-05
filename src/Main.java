@@ -28,13 +28,24 @@ public class Main {
         hit.setName("удар");
         Rocket rocket = new Rocket();
         rocket.setName("Ракета");
-        Bullet bullet = new Bullet("Пуля");
+        Bullet bullet = new Bullet();
+        bullet.setName("Пуля");
         Cosmonaut cosmonaut = new Cosmonaut("космонавт");
         //Confusion confusion = new Confusion("замешательство");
+        int a = 0;
 
         System.out.print(znaika.getName() + " ");
-        Znaika.move("на снижение");
-        System.out.println(" " + rocket0.getName() + " " + "на снижение");
+        try {
+            Znaika.move("на снижение");
+            a = 1;
+        }catch (ShipMoveEx shipMoveEx) {
+            System.out.println(shipMoveEx.getMessage());
+            a = 2;
+        }finally {
+            if (a == 1) {
+                System.out.println(" " + rocket0.getName() + " " + "на снижение");
+            }else System.out.println(" " + rocket0.getName() + " " + "вверх");
+        }
         System.out.print(stekliaskin.getName() + " " + stekliaskin.see());
         Policeman.boomStick.armed("на крышах домов");
         System.out.println( " "+ policeman.getName() + ", " + Policeman.boomStick.getName());
@@ -82,9 +93,13 @@ public class Main {
 
         //System.out.print(confusion.happen() + " " + confusion.getName());
 
+        String exMess = bullet.getName();
+        SomeEx someEx = new SomeEx("knock knock neo");
         Confus conf = new Confus(){                           //анонимный класс
             public void fall(){
-                System.out.print("Произошло замешательство");
+                if (bullet.getName().equals(exMess)) {
+                    System.out.print("Произошло замешательство");
+                }else throw new SomeEx(someEx.getMessage());
             }
         };
         conf.fall();
