@@ -81,6 +81,12 @@ public class Main {
         System.out.println(placeName);
 
         //System.out.print(confusion.happen() + " " + confusion.getName());
-        confusion.conf.fall();
+
+        Confus conf = new Confus(){                           //анонимный класс
+            public void fall(){
+                System.out.print("Произошло замешательство");
+            }
+        };
+        conf.fall();
     }
 }
